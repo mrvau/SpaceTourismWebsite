@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Bellefair&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed&display=swap');
+
+:root {
+    --main-color: #0b0d17;
+    --secend-color: #d2d8f9;
+    --hover-color: #85868b;
+    --main-padding-top: 100px;
+    --main-padding-bottom: 100px;
+    --main-font: "Barlow Condensed", sans-serif;
+    --secend-font: "Bellefair", "serifs";
+}
+
+.landing {
+    background-image: url(../home/background-home-desktop.jpg);
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    padding-top: calc(130.15px + 72.2px);
+}
+
+.landing .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding-bottom: var(--main-padding-bottom);
+}
+
+.landing .container .content {
+    width: 362.9px;
+}
+
+.landing .container h1 {
+    font-size: 26.6;
+    font-family: var(--main-font);
+    color: var(--secend-color);
+    font-weight: 400;
+    letter-spacing: 4.484px;
+}
+
+.landing .container h1 span {
+    font-family: var(--secend-font);
+    font-size: 142.5px;
+    color: #fff;
+    text-transform: uppercase;
+    display: inline-block;
+    margin: 22.8px 0;
+    letter-spacing: 0;
+}
+
+.landing .container p {
+    font-size: 17.1px;
+    color: var(--secend-color);
+    font-family: var(--main-font);
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: 30.4px;
+}
+
+.landing .container a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 260.3px;
+    height: 260.3px;
+    background-color: #fff;
+    border-radius: 50%;
+    font-family: var(--secend-color);
+    font-size: 30.4;
+    position: relative;
+    color: var(--main-color);
+    z-index: 5;
+    margin-bottom: 61.75px;
+}
+
+.landing .container a::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 0px;
+    width: 0px;
+    z-index: 3;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.1);
+    transition: 0.3s linear;
+}
+
+.landing .container a:hover::before {
+    height: 427.5px;
+    width: 427.5px;
+}
+
+/* Tablet Divice */
+@media (max-width: 768px) {
+    .landing {
+    background-image: url(../assets/home/background-home-tablet.jpg);
+    }
+    .landing .container {
+    flex-direction: column;
+    align-items: center;
+    }
+    .landing .container h1 {
+    text-align: center;
+    }
+    .landing .container p {
+    margin-bottom: 156px;
+    }
+}
+  /* Phone Divice */
+@media (max-width: 576px) {
+    .landing {
+    background-image: url(../assets/home/background-home-mobile.jpg);
+    }
+    .landing .container .content {
+    width: 327px;
+    }
+    .landing .container h1 span {
+    font-size: 80px;
+    }
+    .landing .container p {
+    font-size: 15px;
+    }
+}
